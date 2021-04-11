@@ -4,23 +4,18 @@ hostname spine01
 log syslog informational
 service integrated-vtysh-config
 !
-vrf LinuxAdmin
-  vni 10010
+interface swp1
+  ip router isis 1
+  isis ciruit-level 1
 !
-router bgp 42000000
- bgp router-id 10.0.0.111
- neighbor swp1 interface remote-as external
- neighbor swp2 interface remote-as external
- !
- address-family ipv4 unicast
-  redistribute connected
- exit-address-family
- !
- address-family l2vpn evpn
-  neighbor swp1 activate
-  neighbor swp2 activate
-  advertise-all-vni
- exit-address-family
+interface swp2
+  ip router isis 1
+  isis circuit-level 1
+!
+router isis 1
+  is-type level 1
+  net 49.0001.0000.0000.0002.00
+
 !
 line vty
 !
