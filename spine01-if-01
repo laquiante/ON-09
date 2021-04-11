@@ -4,9 +4,11 @@ iface lo inet loopback
 
 auto swp1
 iface swp1
+     address 192.168.11.1/24
 
 auto swp2
 iface swp2
+     address 192.168.12.1/24
 
 auto mgmt
 iface mgmt
