@@ -4,9 +4,6 @@ hostname leaf02
 log syslog informational
 service integrated-vtysh-config
 !
-vrf LinuxAdmin
-  vni 10010
-!
 interface swp2
   ip router isis 1
   isis ciruit-level 1
