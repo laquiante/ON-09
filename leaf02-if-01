@@ -8,6 +8,7 @@ iface swp2
 
 auto swp51
 iface swp51
+   address 192.168.12.2/24
 
 auto bridge
 iface bridge
