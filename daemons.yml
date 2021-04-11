@@ -6,7 +6,7 @@
   become: yes
   tasks:
     - copy:
-        src: /home/cumulus/ON-07/daemons
+        src: /home/cumulus/ON-09/daemons
         dest: /etc/frr/daemons
       notify:
         - frr_restart
@@ -23,7 +23,7 @@
   become: yes
   tasks:
     - copy:
-        src: /home/cumulus/ON-07/daemons
+        src: /home/cumulus/ON-09/daemons
         dest: /etc/frr/daemons
       notify:
         - frr_restart
