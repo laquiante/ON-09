@@ -4,7 +4,7 @@ hostname leaf01
 log syslog informational
 service integrated-vtysh-config
 !
-interface swp1
+interface vlan10
   ip router isis 1
   isis ciruit-level 1
 !
